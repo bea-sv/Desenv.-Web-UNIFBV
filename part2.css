@@ -1,0 +1,27 @@
+.container{
+  width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color:lightblue;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    text-align: right;
+}
+.container h1{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    color: #333;
+    margin: 0;
+}   
+.container h2{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    color: #333;
+    margin: 0;
+}   
+.container h3{
+    font-family: arial, Helvetica, sans-serif;
+    font-size: xx-large;
+    color: #333;
+    margin: 0;
+}   
