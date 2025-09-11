@@ -1,25 +1,18 @@
+<?php require __DIR__ . '/db.php'; ?>
+<?php include __DIR__ . '/header.php'; ?>
+
+<h2>Home</h2>
 <?php
-
-
-echo"beatriz";
-$nome = "beatriz";
-$dia = 21;
-$altura = 1.75;
-$ativo = true;
-$lista = ["php","mysql","html"];
-echo "\n$nome está no dia $dia na aula de {$lista[0]}.";
-
-
-#Estruturas de rep.
-$nota = 8.3;
-if ($nota>=7) {
-    echo "Aprovado\n";
-}else{
-    echo "Reprovado";
-}
-for ($i = 0; $i<3; $i++){
-    echo "for:$i\n";
-}
+$about = $pdo->query("SELECT * FROM quem_somos ORDER BY id DESC LIMIT 1")->fetch();
+if ($about):
 ?>
+  <h3><?= e($about['titulo']) ?></h3>
+  <p><?= nl2br(e($about['historia'])) ?></p>
+  <?php if ($about['foto_path']): ?>
+    <p><img src="<?= e($about['foto_path']) ?>" alt="Foto da empresa" width="300"></p>
+  <?php endif; ?>
+<?php else: ?>
+  <p>Ainda não há conteúdo de “Quem Somos”.</p>
+<?php endif; ?>
 
-
+<?php include __DIR__ . '/footer.php'; ?>
