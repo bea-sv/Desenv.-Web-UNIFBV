@@ -12,7 +12,7 @@ require 'PHPMailer/src/SMTP.php';
 
 
 $GMAIL_USERNAME = 'bea.souzav0@gmail.com';  
-$GMAIL_APP_PASS = 'agwr jmqr etxv ybyq'; 
+$GMAIL_APP_PASS = ''; 
 $DESTINO        = 'bea.souzav0@gmail.com'; 
 
 
@@ -80,3 +80,4 @@ try {
   http_response_code(500);
   echo '<p class="err">Erro ao enviar: ' . htmlspecialchars($mail->ErrorInfo, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') . '</p>';
 }
+
